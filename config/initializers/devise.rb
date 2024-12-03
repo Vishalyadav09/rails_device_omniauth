@@ -27,6 +27,7 @@ Devise.setup do |config|
   config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
   config.omniauth :facebook, Rails.application.credentials.facebook[:APP_ID], Rails.application.credentials.facebook[:APP_SECRET], scope: 'email,public_profile', info_fields: 'email,name', token_params: { parse: :json }, auth_type: 'reauthenticate'
   config.omniauth :google_oauth2, Rails.application.credentials.google[:APP_ID], Rails.application.credentials.google[:APP_SECRET]
+  config.omniauth :github, Rails.application.credentials.github[:APP_ID], Rails.application.credentials.github[:APP_SECRET], scope: 'user:email'
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 

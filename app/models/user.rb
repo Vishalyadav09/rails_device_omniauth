@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
-         :omniauthable, omniauth_providers: %i[facebook google_oauth2]
+         :omniauthable, omniauth_providers: %i[facebook google_oauth2 github]
 
 
   def self.from_omniauth(auth)
@@ -22,7 +22,7 @@ class User < ApplicationRecord
         password: Devise.friendly_token[0, 20]
       )
     end
-    
+
     user.add_last_sign_in(auth)  
 
     user

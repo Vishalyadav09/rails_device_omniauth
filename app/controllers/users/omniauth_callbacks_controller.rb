@@ -7,6 +7,10 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def google_oauth2
     handle_omniauth("Google")
   end
+
+  def github
+    handle_omniauth("github")
+  end
   
   def failure
     redirect_to root_path
