@@ -15,6 +15,10 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def twitter
     handle_omniauth("twitter")
   end
+
+  def linkedin
+    handle_omniauth("linkedin")
+  end
   
   def failure
     redirect_to root_path
