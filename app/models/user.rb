@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
-         :omniauthable, omniauth_providers: %i[facebook]
+         :omniauthable, omniauth_providers: %i[facebook google_oauth2]
 
 
   def self.from_omniauth(auth)
@@ -22,8 +22,20 @@ class User < ApplicationRecord
         password: Devise.friendly_token[0, 20]
       )
     end
+    
+    user.add_last_sign_in(auth)  
 
     user
   end
-  
+
+  def add_last_sign_in(auth)
+    last_sign_in_detail = {
+      provider: auth.provider,
+      uid: auth.uid,
+      sign_in_at: Time.current
+    }
+
+    update_column(:last_sign_in, last_sign_in_detail)
+  end
+
 end

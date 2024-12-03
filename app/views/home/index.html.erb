@@ -59,6 +59,7 @@
                 Log in to your account first
             </h1>
             <%= button_to "Login with facebook", user_facebook_omniauth_authorize_path, class: 'text-blue-500', method: :post, "data-turbo": false %>
+            <%= button_to "Login with Google", user_google_oauth2_omniauth_authorize_path, method: :post, class: 'text-blue-500', :data => {turbo: "false"} %>
         </div>
     </div>
   </div>
