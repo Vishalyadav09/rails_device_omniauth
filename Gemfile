@@ -37,6 +37,7 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-github'
+gem 'omniauth-twitter'
 gem 'omniauth-rails_csrf_protection'
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
