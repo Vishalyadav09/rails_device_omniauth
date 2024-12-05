@@ -29,7 +29,7 @@ Devise.setup do |config|
   config.omniauth :google_oauth2, Rails.application.credentials.google[:APP_ID], Rails.application.credentials.google[:APP_SECRET]
   config.omniauth :github, Rails.application.credentials.github[:APP_ID], Rails.application.credentials.github[:APP_SECRET], scope: 'user:email'
   config.omniauth :twitter, Rails.application.credentials.twitter[:APP_ID], Rails.application.credentials.twitter[:APP_SECRET], scope: 'user:email'
-  config.omniauth :linkedin, Rails.application.credentials.linkedin[:APP_ID], Rails.application.credentials.linkedin[:APP_SECRET], :scope => 'openid profile email'
+  config.omniauth :linkedin, Rails.application.credentials.linkedin[:APP_ID], Rails.application.credentials.linkedin[:APP_SECRET], scope: 'openid profile email' 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 
