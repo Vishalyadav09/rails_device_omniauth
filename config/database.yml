@@ -1,7 +1,8 @@
 development:
   adapter: postgresql
   pool: 5
-  database: devise_omniauth
-  username: <%= ENV['DB_USERNAME'] %>
-  password: <%= ENV['DB_PASSWORD'] %>
-  host: localhost
+  database: devise_omniauth1
+  username: dummy
+  password: dummy
+  host: db
+  port: 5432
