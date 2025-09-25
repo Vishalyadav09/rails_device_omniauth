@@ -6,3 +6,12 @@ development:
   password: dummy
   host: db
   port: 5432
+
+test:
+  adapter: postgresql
+  pool: 5
+  database: devise_omniauth1_test
+  username: dummy
+  password: dummy
+  host: db
+  port: 5432
